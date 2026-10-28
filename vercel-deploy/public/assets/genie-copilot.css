@@ -1,0 +1,30 @@
+.genie-copilot-link {
+  display: inline-flex;
+  min-height: 36px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 150ms ease;
+}
+
+.genie-copilot-link:hover,
+.genie-copilot-link:focus-visible {
+  background: rgb(255 255 255 / 14%);
+}
+
+.genie-copilot-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 380px) {
+  .genie-copilot-link { padding-right: 7px; padding-left: 7px; }
+}

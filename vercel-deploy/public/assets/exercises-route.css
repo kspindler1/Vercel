@@ -1,0 +1,6 @@
+.exercises-route #root > div { min-height: 0; }
+.exercises-route #root > div > canvas { display: none !important; }
+.exercises-route #root > div > main,
+.exercises-route #root > div > footer { display: none !important; }
+body:not(.exercises-route) > main.prompt-page { display: none !important; }
+.exercises-route #root nav[aria-label="Primary mobile"] > .overflow-x-auto { overflow-x: auto; }

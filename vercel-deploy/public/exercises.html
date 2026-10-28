@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="description" content="Practice agent troubleshooting and identify practical AI opportunities." />
+    <title>Exercises · Kloud</title>
+    <link rel="stylesheet" href="/assets/index-beginner-v4.css" />
+    <link rel="stylesheet" href="/assets/advanced-game.css" />
+    <link rel="stylesheet" href="/assets/exercises-route.css?v=exercise-mobile-overflow-fix" />
+    <link rel="stylesheet" href="/assets/genie-copilot.css" />
+    <script defer src="/assets/exercises-nav.js?v=exercise-route-v6"></script>
+    <script defer src="/assets/genie-copilot.js"></script>
+    <script defer src="/assets/advanced-game.js"></script>
+    <script type="module" crossorigin src="/assets/index-beginner-v4.js?v=kloud-brand-v16"></script>
+  </head>
+  <body class="exercises-route">
+    <div id="root"></div>
+    <main class="prompt-page">
+      <header class="page-heading">
+        <div class="identity">
+          <div class="flask-mark" aria-hidden="true">AI</div>
+          <div><p class="edition">HANDS-ON LEARNING</p><h1>Exercises</h1></div>
+        </div>
+        <p class="page-summary">Practice agent troubleshooting and identify practical AI opportunities through focused challenges.</p>
+      </header>
+      <div class="exercise-switcher" role="group" aria-label="Choose an exercise">
+        <button class="exercise-tab is-active" type="button" aria-pressed="true" data-exercise-target="advanced-panel">Advanced Agent Troubleshooting</button>
+        <button class="exercise-tab" type="button" aria-pressed="false" data-exercise-target="opportunity-panel">Spot the AI Opportunity</button>
+      </div>
+      <section id="advanced-panel" class="exercise-panel advanced-panel" aria-label="Advanced Agent Troubleshooting">
+        <div class="advanced-heading">
+          <div><p class="edition">SCENARIO-BASED PRACTICE</p><h2>Advanced Agent Troubleshooting</h2></div>
+        </div>
+        <div class="advanced-game-root">
+          <div class="shell">
+            <div class="game-toolbar"><button id="restart" class="btn ghost hidden" type="button">Restart</button></div>
+            <section id="start" class="hero card">
+              <div class="pill">Harder choices. Generic principles. Realistic controls.</div>
+              <h2>Do not just fix it.<br /><span class="grad">Make it safer.</span></h2>
+              <p class="muted">Three image rounds followed by three troubleshooting rounds. The answer positions are mixed, and the distractors are intentionally plausible.</p>
+              <div class="join"><input id="teamInput" placeholder="Team name (optional)" /><button id="startBtn" class="btn" type="button">Enter the Arena</button></div>
+            </section>
+            <section id="game" class="hidden">
+              <div class="stats">
+                <div class="stat"><small>ROUND</small><b id="round"></b></div>
+                <div class="stat"><small>SCORE</small><b id="score"></b></div>
+                <div class="stat"><small>STREAK</small><b id="streak"></b></div>
+                <div class="stat"><small>TEAM</small><b id="team"></b></div>
+              </div>
+              <div class="progress"><i id="bar"></i></div>
+              <div class="game card">
+                <span id="category" class="tag"></span>
+                <h2 id="scenario" class="scenario"></h2>
+                <p class="muted">Which question or design response is strongest?</p>
+                <div id="options" class="options"></div>
+                <div id="coach" class="coach hidden">
+                  <h3>Coach's call</h3>
+                  <p id="coachText" class="muted"></p>
+                  <div id="keylesson" class="keylesson hidden"></div>
+                  <div id="rule" class="rule"></div>
+                  <div id="tip" class="tip"></div>
+                  <button id="next" class="btn" type="button" style="margin-top:14px">Next Round</button>
+                </div>
+                <div id="studio" class="studio hidden">
+                  <h3>Image Studio: vague vs. detailed</h3>
+                  <div id="images" class="images"></div>
+                </div>
+              </div>
+            </section>
+            <section id="result" class="result card hidden">
+              <h2>Battle complete</h2>
+              <div id="final" class="score"></div>
+              <p class="muted">points earned</p>
+              <button id="summaryBtn" class="btn" type="button">View Reusable Rules</button>
+              <button id="again" class="btn ghost" type="button">Play Again</button>
+            </section>
+            <section id="summary" class="summary card hidden">
+              <div class="pill">Reusable agent-training asset</div>
+              <h2>Advanced Agent Troubleshooting Rules</h2>
+              <p class="muted">Use these rules when designing, testing, releasing, and improving agents.</p>
+              <ol id="ruleList" class="rulelist"></ol>
+              <button id="summaryAgain" class="btn" type="button">Play Again</button>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section id="opportunity-panel" class="exercise-panel opportunity-panel" aria-label="Spot the AI Opportunity" hidden>
+        <header class="advanced-heading">
+          <div><p class="edition">PAIN POINT TO BETTER WORKFLOW</p><h2>Spot the AI Opportunity</h2></div>
+          <p class="opportunity-intro">Start with the work that wears people down. Decide what belongs with a person, Copilot, a reusable prompt, or an agent.</p>
+        </header>
+        <div id="opportunity-exercise" class="opportunity-exercise">
+          <div class="opportunity-progress-row">
+            <span id="opportunity-progress-label" aria-live="polite">Scenario 1 of 4</span>
+            <div class="opportunity-progress-track" role="progressbar" aria-label="Scenario progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span id="opportunity-progress-fill"></span></div>
+          </div>
+          <article class="opportunity-scenario" aria-labelledby="opportunity-title">
+            <p id="opportunity-category" class="opportunity-category"></p>
+            <h3 id="opportunity-title" tabindex="-1"></h3>
+            <div id="opportunity-story" class="opportunity-story" aria-live="polite"></div>
+            <p class="opportunity-challenge"><strong>Challenge:</strong> <span id="opportunity-challenge"></span></p>
+          </article>
+          <div id="opportunity-special" class="opportunity-special"></div>
+          <div id="opportunity-answers" class="opportunity-answers"></div>
+          <section class="opportunity-example" aria-label="Example response">
+            <button id="opportunity-reveal" class="opportunity-reveal" type="button" aria-expanded="false" aria-controls="opportunity-example-content">Reveal a possible prompt and AI opportunity</button>
+            <div id="opportunity-example-content" class="opportunity-example-content" hidden>
+              <p class="opportunity-example-label">Possible Copilot prompt</p>
+              <blockquote id="opportunity-prompt"></blockquote>
+              <button id="opportunity-copy" class="opportunity-copy" type="button">Copy prompt</button>
+              <p id="opportunity-agent-extension" class="opportunity-agent-extension" hidden></p>
+              <p class="opportunity-example-label">AI opportunity</p>
+              <p id="opportunity-opportunity"></p>
+              <p id="opportunity-relatable" class="opportunity-relatable"></p>
+            </div>
+          </section>
+          <div class="opportunity-controls">
+            <button id="opportunity-previous" class="opportunity-nav secondary" type="button" disabled>Previous</button>
+            <button id="opportunity-next" class="opportunity-nav" type="button">Next scenario</button>
+          </div>
+        </div>
+        <section id="opportunity-finish" class="opportunity-finish" aria-labelledby="opportunity-finish-title" hidden>
+          <p class="edition">THE AHA</p>
+          <h3 id="opportunity-finish-title">A better way is a progression</h3>
+          <ol class="opportunity-ladder">
+            <li><strong>Manual work</strong><span>Notice the repeated effort and friction.</span></li>
+            <li><strong>Copilot</strong><span>Help me do the work.</span></li>
+            <li><strong>Reusable prompt / skill</strong><span>Help everyone do this consistently.</span></li>
+            <li><strong>Agent</strong><span>Do this process for me, across multiple steps.</span></li>
+            <li><strong>Human judgment</strong><span>Review exceptions, make decisions, own accountability.</span></li>
+          </ol>
+          <p class="opportunity-final-question">What did you do this week that made you think: there has to be a better way to do this?</p>
+          <div id="opportunity-final-options" class="opportunity-final-options"></div>
+          <button id="opportunity-restart" class="opportunity-nav secondary" type="button">Restart scenarios</button>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
